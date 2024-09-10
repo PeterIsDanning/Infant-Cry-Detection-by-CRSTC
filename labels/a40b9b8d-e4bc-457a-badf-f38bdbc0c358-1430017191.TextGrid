@@ -1,0 +1,86 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0
+xmax = 6.92
+tiers? <exists>
+size = 1
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "silences"
+        xmin = 0
+       xmax = 6.92
+        intervals: size = 18
+        intervals [1]:
+            xmin = 0.0
+           xmax = 0.44
+           text = "cry"
+        intervals [1]:
+            xmin = 0.44
+           xmax = 1.04
+           text = "-"
+        intervals [1]:
+            xmin = 1.04
+           xmax = 2.008
+           text = "cry"
+        intervals [1]:
+            xmin = 2.008
+           xmax = 2.807125
+           text = "-"
+        intervals [1]:
+            xmin = 2.807125
+           xmax = 3.00025
+           text = "cry"
+        intervals [1]:
+            xmin = 3.00025
+           xmax = 3.296
+           text = "-"
+        intervals [1]:
+            xmin = 3.296
+           xmax = 3.88
+           text = "cry"
+        intervals [1]:
+            xmin = 3.88
+           xmax = 4.272
+           text = "-"
+        intervals [1]:
+            xmin = 4.272
+           xmax = 4.536
+           text = "cry"
+        intervals [1]:
+            xmin = 4.536
+           xmax = 4.944
+           text = "-"
+        intervals [1]:
+            xmin = 4.944
+           xmax = 5.08
+           text = "cry"
+        intervals [1]:
+            xmin = 5.08
+           xmax = 5.336
+           text = "-"
+        intervals [1]:
+            xmin = 5.336
+           xmax = 5.496
+           text = "cry"
+        intervals [1]:
+            xmin = 5.496
+           xmax = 5.896
+           text = "-"
+        intervals [1]:
+            xmin = 5.896
+           xmax = 6.096
+           text = "cry"
+        intervals [1]:
+            xmin = 6.096
+           xmax = 6.48
+           text = "-"
+        intervals [1]:
+            xmin = 6.48
+           xmax = 6.592
+           text = "cry"
+        intervals [1]:
+            xmin = 6.592
+           xmax = 6.92
+           text = "-"

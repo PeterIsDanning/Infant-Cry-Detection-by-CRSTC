@@ -1,0 +1,90 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0
+xmax = 7.0
+tiers? <exists>
+size = 1
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "silences"
+        xmin = 0
+       xmax = 7.0
+        intervals: size = 19
+        intervals [1]:
+            xmin = 0.0
+           xmax = 0.672
+           text = "cry"
+        intervals [1]:
+            xmin = 0.672
+           xmax = 0.832
+           text = "-"
+        intervals [1]:
+            xmin = 0.832
+           xmax = 2.294375
+           text = "cry"
+        intervals [1]:
+            xmin = 2.294375
+           xmax = 2.496
+           text = "-"
+        intervals [1]:
+            xmin = 2.496
+           xmax = 3.04
+           text = "cry"
+        intervals [1]:
+            xmin = 3.04
+           xmax = 3.36
+           text = "-"
+        intervals [1]:
+            xmin = 3.36
+           xmax = 3.63025
+           text = "cry"
+        intervals [1]:
+            xmin = 3.63025
+           xmax = 3.736
+           text = "-"
+        intervals [1]:
+            xmin = 3.736
+           xmax = 4.296
+           text = "cry"
+        intervals [1]:
+            xmin = 4.296
+           xmax = 4.408
+           text = "-"
+        intervals [1]:
+            xmin = 4.408
+           xmax = 4.616
+           text = "cry"
+        intervals [1]:
+            xmin = 4.616
+           xmax = 5.034125
+           text = "-"
+        intervals [1]:
+            xmin = 5.034125
+           xmax = 5.115
+           text = "cry"
+        intervals [1]:
+            xmin = 5.115
+           xmax = 5.483375
+           text = "-"
+        intervals [1]:
+            xmin = 5.483375
+           xmax = 5.54175
+           text = "cry"
+        intervals [1]:
+            xmin = 5.54175
+           xmax = 5.936
+           text = "-"
+        intervals [1]:
+            xmin = 5.936
+           xmax = 6.432
+           text = "cry"
+        intervals [1]:
+            xmin = 6.432
+           xmax = 6.632
+           text = "-"
+        intervals [1]:
+            xmin = 6.632
+           xmax = 7.0
+           text = "cry"

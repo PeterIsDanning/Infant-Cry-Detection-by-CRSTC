@@ -1,0 +1,86 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0
+xmax = 6.82
+tiers? <exists>
+size = 1
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "silences"
+        xmin = 0
+       xmax = 6.82
+        intervals: size = 18
+        intervals [1]:
+            xmin = 0.0
+           xmax = 0.146
+           text = "-"
+        intervals [1]:
+            xmin = 0.146
+           xmax = 0.994
+           text = "cry"
+        intervals [1]:
+            xmin = 0.994
+           xmax = 1.17
+           text = "-"
+        intervals [1]:
+            xmin = 1.17
+           xmax = 2.138
+           text = "cry"
+        intervals [1]:
+            xmin = 2.138
+           xmax = 2.346
+           text = "-"
+        intervals [1]:
+            xmin = 2.346
+           xmax = 2.778
+           text = "cry"
+        intervals [1]:
+            xmin = 2.778
+           xmax = 3.13
+           text = "-"
+        intervals [1]:
+            xmin = 3.13
+           xmax = 3.714
+           text = "cry"
+        intervals [1]:
+            xmin = 3.714
+           xmax = 3.93
+           text = "-"
+        intervals [1]:
+            xmin = 3.93
+           xmax = 5.61
+           text = "cry"
+        intervals [1]:
+            xmin = 5.61
+           xmax = 5.778
+           text = "-"
+        intervals [1]:
+            xmin = 5.778
+           xmax = 5.962
+           text = "cry"
+        intervals [1]:
+            xmin = 5.962
+           xmax = 6.13
+           text = "-"
+        intervals [1]:
+            xmin = 6.13
+           xmax = 6.384
+           text = "cry"
+        intervals [1]:
+            xmin = 6.384
+           xmax = 6.436625
+           text = "-"
+        intervals [1]:
+            xmin = 6.436625
+           xmax = 6.602875
+           text = "cry"
+        intervals [1]:
+            xmin = 6.602875
+           xmax = 6.65325
+           text = "-"
+        intervals [1]:
+            xmin = 6.65325
+           xmax = 6.82
+           text = "cry"

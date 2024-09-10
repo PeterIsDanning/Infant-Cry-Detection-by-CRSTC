@@ -1,0 +1,86 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0
+xmax = 7.0
+tiers? <exists>
+size = 1
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "silences"
+        xmin = 0
+       xmax = 7.0
+        intervals: size = 18
+        intervals [1]:
+            xmin = 0.0
+           xmax = 0.184
+           text = "-"
+        intervals [1]:
+            xmin = 0.184
+           xmax = 0.288
+           text = "cry"
+        intervals [1]:
+            xmin = 0.288
+           xmax = 0.832
+           text = "-"
+        intervals [1]:
+            xmin = 0.832
+           xmax = 1.136
+           text = "cry"
+        intervals [1]:
+            xmin = 1.136
+           xmax = 1.287375
+           text = "-"
+        intervals [1]:
+            xmin = 1.287375
+           xmax = 1.3885
+           text = "cry"
+        intervals [1]:
+            xmin = 1.3885
+           xmax = 1.728
+           text = "-"
+        intervals [1]:
+            xmin = 1.728
+           xmax = 2.288
+           text = "cry"
+        intervals [1]:
+            xmin = 2.288
+           xmax = 2.56
+           text = "-"
+        intervals [1]:
+            xmin = 2.56
+           xmax = 2.88
+           text = "cry"
+        intervals [1]:
+            xmin = 2.88
+           xmax = 3.168
+           text = "-"
+        intervals [1]:
+            xmin = 3.168
+           xmax = 3.496
+           text = "cry"
+        intervals [1]:
+            xmin = 3.496
+           xmax = 3.912
+           text = "-"
+        intervals [1]:
+            xmin = 3.912
+           xmax = 4.224
+           text = "cry"
+        intervals [1]:
+            xmin = 4.224
+           xmax = 4.568
+           text = "-"
+        intervals [1]:
+            xmin = 4.568
+           xmax = 4.888
+           text = "cry"
+        intervals [1]:
+            xmin = 4.888
+           xmax = 5.272
+           text = "-"
+        intervals [1]:
+            xmin = 5.272
+           xmax = 7.0
+           text = "cry"
