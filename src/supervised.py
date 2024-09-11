@@ -5,6 +5,8 @@ import torch.nn as nn
 from torch.optim import AdamW, lr_scheduler
 from torch.utils.data import Dataset
 from torchvision import models
+from sklearn.metrics import f1_score, accuracy_score
+from metrics.event_based_metrics import event_metrics
 from .audio_preprocessing import *
 
 class AudioDataset(Dataset):
@@ -37,6 +39,38 @@ class AudioMobileNetV2(nn.Module):
         x = x.view(batch_size, num_frame, -1)  
         return x
 
+class AudioBiLSTM(nn.Module):
+    def __init__(self, num_features):
+        super().__init__()
+        self.lstm1 = nn.LSTM(num_features, 128, bidirectional=True, batch_first=True)
+        self.lstm2 = nn.LSTM(256, 128, bidirectional=True, batch_first=True)
+        self.dense = nn.Linear(256, 1)
+
+    def forward(self, x):
+        out, _ = self.lstm1(x)
+        out, _ = self.lstm2(out)
+        out = self.dense(out)
+        return out
+    
+class AudioTransformer(nn.Module):
+    def __init__(self, input_dim=41, hidden_dim=128, num_heads=4, num_layers=2):
+        super().__init__()
+        self.input_projection = nn.Linear(input_dim, hidden_dim)
+        encoder_layers = nn.TransformerEncoderLayer(d_model=hidden_dim, nhead=num_heads)
+        self.transformer_encoder = nn.TransformerEncoder(encoder_layers, num_layers=num_layers)
+        self.fc = nn.Linear(hidden_dim, 1) 
+
+    def forward(self, x):
+        batch_size, num_frame, feature_dim = x.size()
+        x = x.view(batch_size*num_frame, 1, feature_dim)
+        x = self.input_projection(x)
+        x = x.permute(1, 0, 2)  
+        transformer_out = self.transformer_encoder(x)
+        out = transformer_out[0, :, :]
+        out = self.fc(out)
+        out = out.view(batch_size, num_frame, 1)
+        return out
+
 def train(model, train_loader, device, num_epochs=10):
     criterion = nn.BCEWithLogitsLoss()
     optimizer = AdamW(model.parameters(), lr=0.001)
@@ -60,6 +94,35 @@ def train(model, train_loader, device, num_epochs=10):
             
         scheduler.step()
         print(f'Epoch {epoch+1}/{num_epochs}, Loss: {running_loss/len(train_loader)}, LR: {scheduler.get_last_lr()[0]}')
+
+def eval(model, test_loader, device):
+    model.eval()
+    acc_list = []
+    framef_list = []
+    eventf_list = []
+    iou_list = []
+    with torch.no_grad():
+        for inputs, labels in test_loader:
+            # Move inputs and labels to GPU
+            inputs, labels = inputs.to(device), labels.to(device)
+            outputs = model(inputs)
+            outputs = outputs.view(-1)
+            labels = labels.view(-1).float()  # Convert labels to float for BCEWithLogitsLoss
+            preds = torch.sigmoid(outputs)  # Apply sigmoid to get probabilities
+            preds = (preds > 0.5).float()  # Convert probabilities to binary predictions
+            labels = labels.cpu().numpy()
+            preds = preds.cpu().numpy()
+            # Frame-based accuracy
+            accuracy = accuracy_score(labels, preds)
+            acc_list.append(accuracy)
+            # Frame-based F1 score
+            framef = f1_score(labels, preds)
+            framef_list.append(framef)
+            # Event-based metrics
+            eventf, iou, counted_events, fake_events, undetected_events = event_metrics(labels, preds, tolerance=9, overlap_threshold=0.75)
+            eventf_list.append(eventf)
+            iou_list.append(iou)
+    return acc_list, framef_list, eventf_list, iou_list
 
 def save_model(model, path):
     torch.save(model.state_dict(), path)
