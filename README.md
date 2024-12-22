@@ -8,7 +8,7 @@ This project focuses on detecting infant cries using a novel **causal temporal r
 - **Event-Based Metrics**: Evaluation metrics tailored for time-sensitive detection tasks, including event-based F1-score and IOU.
 - **Interactive Example**: A Jupyter Notebook with step-by-step demonstrations.
 
-![Data Generating Process](main.img)
+![Causal Graph]([main.img](https://github.com/PeterIsDanning/Infant-Cry-Detection-by-CRSTC/blob/main/casual_graph.png))
 
 ## Repository Structure
 
