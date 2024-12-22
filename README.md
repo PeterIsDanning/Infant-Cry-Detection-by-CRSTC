@@ -46,12 +46,6 @@ This project focuses on detecting infant cries using a novel **causal temporal r
 - **experiment.ipynb**: A Jupyter Notebook with a simple use case example.
   - Demonstrates how to load data, preprocess it, train a model, and evaluate its performance.
 
-## Mathematical Assumptions
-Our method is rooted in causal inference principles. The Data Generating Process (DGP) assumes the following relationships between variables:
-1. Audio signals are causally influenced by external factors (e.g., infant state, environment).
-2. Annotations represent the causal outcomes of these underlying events.
-3. Temporal representations explicitly model dependencies between consecutive events, ensuring accurate event segmentation and detection.
-
 For more details, refer to our accompanying research paper.
 
 ## License
